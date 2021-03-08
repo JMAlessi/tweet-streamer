@@ -5,6 +5,9 @@ import Navbar from "./Navbar";
 import TweetFeed from "./TweetFeed";
 import RuleList from "./RuleList";
 
+import List from "./List";
+import Form from "./Form";
+
 class App extends React.Component {
   render() {
     return (
@@ -24,6 +27,8 @@ class App extends React.Component {
             <Route exact path="/" component={RuleList} />
             <Route exact path="/rules" component={RuleList} />
             <Route exact path="/tweets" component={TweetFeed} />
+            <List />
+            <Form />
           </BrowserRouter>
         </div>
       </div>
