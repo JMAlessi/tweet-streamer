@@ -7,6 +7,7 @@ import RuleList from "./RuleList";
 
 import List from "./List";
 import Form from "./Form";
+import Post from "./Posts";
 
 class App extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class App extends React.Component {
             <Route exact path="/tweets" component={TweetFeed} />
             <List />
             <Form />
+            <Post />
           </BrowserRouter>
         </div>
       </div>

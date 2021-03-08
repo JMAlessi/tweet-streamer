@@ -25,6 +25,11 @@ class ConnectedForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { title } = this.state;
+    const forbiddenWords = ['spam', 'money'];
+    const foundWord = forbiddenWords.filter(word => title.includes(word) )
+    if (foundWord) {
+      return this.props.titleForbidden();
+    }
     this.props.addArticle({ title });
     this.setState({ title: "" });
   }
